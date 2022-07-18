@@ -35,6 +35,12 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ### scatterplot
 
+```{r}
+plot(SIMS~ARM,data=data)
+```
+
+The data seems to show a positive linear relationship between SIMS and ARM. By the plot points going up shows arms increases as SIMS do.
+
 ### Numerical results
 
 
