@@ -76,7 +76,13 @@ The prediction for model.1 is 0.7063836.
 
 #### scatterplot with model fit
   
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+basicNN + geom_point()
+basicNN + geom_point() + geom_smooth(method=lm)
+```
   
+  The scatter plot with model.1 is showing the best fit line for the data. 
 
 ## Model 2 SIM~GRIP
 
