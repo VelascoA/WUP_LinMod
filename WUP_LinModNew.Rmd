@@ -62,6 +62,7 @@ The inferential data shows an adjusted r-squared of 0.467 with a standard error 
 
 #### Predict at target point
 
+The value at the target point when adjusting ARM is 0.76544. Using the equation  SIMS=-4.095+0.054563*88.
 
 #### scatterplot with model fit
   
