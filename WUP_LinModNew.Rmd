@@ -113,6 +113,16 @@ The inferential data shows an adjusted r-squared of 0.4053 with a standard error
 
 #### predict model.2 at target point
 
+The value of the target point for model 2 is -0.536153
+
+```{r}
+pdata<- data.frame(ARM=88,GRIP=94)
+```
+
+```{r}
+predict(model.2,pdata)
+```
+
 #### now add the model fit to our plot for model.2
   
 
