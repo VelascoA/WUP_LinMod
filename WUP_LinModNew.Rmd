@@ -93,9 +93,15 @@ plot(SIMS~GRIP,data=data)
 ```
 
  The scatter plot show the relation between SIMS and GRIP having a positive correlation.
+ 
 ### Numerical results 
 
-
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+ 
+ This numerical data shows the positive coloration between SIMS and GRIP. The relation between SIMS and ARM is  higher than GRIP and SIMS.
+ 
 ### Inferential  (Build model.2)
   
 
