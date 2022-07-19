@@ -100,10 +100,16 @@ plot(SIMS~GRIP,data=data)
 cor(SIMS~GRIP,data=data)
 ```
  
- This numerical data shows the positive coloration between SIMS and GRIP. The relation between SIMS and ARM is  higher than GRIP and SIMS.
+ This numerical data shows the positive coloration between SIMS and GRIP. The positive relation between SIMS and ARM is  higher than GRIP and SIMS.
  
 ### Inferential  (Build model.2)
   
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```
+
+The inferential data shows an adjusted r-squared of 0.4053 with a standard error of 1.295. When we fit the model it gave us this equation of SIMS=-4.809675+0.045463*GRIP for the fit line.
 
 #### predict model.2 at target point
 
