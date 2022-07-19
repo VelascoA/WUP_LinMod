@@ -39,7 +39,7 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 plot(SIMS~ARM,data=data)
 ```
 
-The data seems to show a positive linear relationship between SIMS and ARM. By the plot points going up shows arms increases as SIMS do.
+The data seems to show a positive linear relationship between SIMS and ARM. By the plot points going up shows ARMS increases as SIMS do.
 
 ### Numerical results
 
@@ -88,7 +88,11 @@ basicNN + geom_point() + geom_smooth(method=lm)
 
 ### Now add in scatterplot
 
+```{r}
+plot(SIMS~GRIP,data=data)
+```
 
+ The scatter plot show the relation between SIMS and GRIP having a positive correlation.
 ### Numerical results 
 
 
