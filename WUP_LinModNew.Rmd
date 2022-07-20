@@ -139,7 +139,11 @@ The scatter plot for model.2 seems to have points spread further out than the sc
 
 ### Numerical results (cor)
 
-`
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
+
+Arms and grip give us the highest coloration between SIMS and the variable.
   
 ### Inferential  (Build 2-dimentional model.3)
 
