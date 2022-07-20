@@ -86,6 +86,8 @@ basicNN + geom_point() + geom_smooth(method=lm)
 
 ## Model 2 SIM~GRIP
 
+basicNNGrip<-ggplot(data,aes(y=SIMS,x=GRIP))
+
 ### Now add in scatterplot
 
 ```{r}
@@ -124,8 +126,14 @@ predict(model.2,pdata)
 ```
 
 #### now add the model fit to our plot for model.2
-  
+ 
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=GRIP))
+basicNN + geom_point()
+basicNN + geom_point() + geom_smooth(method=lm)
+```
 
+The scatter plot for model.2 seems to have points spread further out than the scatter plot of model.1.
 
 ## Model 3 SIM~ARM+GRIP
 
