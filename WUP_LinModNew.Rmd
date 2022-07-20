@@ -156,6 +156,15 @@ lm(formula=SIMS = -5.433872 + 0.037311 * ARM + .024470 *GRIP, data = data)
 
 #### predict model.3 at target point
   
+ The value of the target of model 3 is 0.1496476.  
+
+```{r}
+pdata<- data.frame(ARM=88,GRIP=94)
+```
+
+```{r}
+predict(model.3,pdata)
+```
 
 ## Comparing nested models ANOVA Test
 
