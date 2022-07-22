@@ -47,7 +47,7 @@ The data seems to show a positive linear relationship between SIMS and ARM. By t
 cor(SIMS~ARM,data=data)
 ```
 
-The numerical results are showing a positive correlation ,or when the dependent variable and independent get bigger together. 
+The numerical results are showing a positive correlation, or when the dependent variable and independent get bigger together. 
 
 
 
@@ -62,7 +62,7 @@ The inferential data shows an adjusted r-squared of 0.467 with a standard error 
 
 #### Predict at target point
 
-The value at the target point  is 0.706544. 
+The value at the target point  is 0.7063836. 
 
 ```{r}
 pdata<- data.frame(ARM=88,GRIP=94)
@@ -72,8 +72,6 @@ pdata<- data.frame(ARM=88,GRIP=94)
 predict(model.1,pdata)
 ```
 
-The prediction for model.1 is 0.7063836.
-
 #### scatterplot with model fit
   
 ```{r}
@@ -82,7 +80,7 @@ basicNN + geom_point()
 basicNN + geom_point() + geom_smooth(method=lm)
 ```
   
-  The scatter plot with model.1 is showing the best fit line for the data. 
+  The scatter plot with model.1 is showing the best fit line for the data.
 
 ## Model 2 SIM~GRIP
 
@@ -143,7 +141,7 @@ The scatter plot for model.2 seems to have points spread further out than the sc
 cor(SIMS~ARM+GRIP,data=data)
 ```
 
-Arms and grip give us the highest coloration between all the models.
+Arm and grip give us the highest positive coloration between all the models.
   
 ### Inferential  (Build 2-dimentional model.3)
 
@@ -152,7 +150,8 @@ model.3 <- lm(SIMS~ARM+GRIP,data=data)
 summary.lm(model.3)
 ```
 
-lm(formula=SIMS = -5.433872 + 0.037311 * ARM + .024470 *GRIP, data = data)
+The inferential data shows an adjusted r-squared of 0.5358 with a standard error of 1.144. When we fit the model it gave us this equation of
+lm(formula=SIMS = -5.433872 + 0.037311 * ARM + .024470 *GRIP, data = data).
 
 #### predict model.3 at target point
   
@@ -173,6 +172,7 @@ predict(model.3,pdata)
 ```{r}
 anova(model.1,model.3)
 ```
+The anova that compares the two models of 1 and 3 tell us that that ARM and GRIP combined is the better model. The P value being so small shows us the tiny possibility of getting these results if there was no difference between the models.
 
 ### Model.2 vs Model.3
 
@@ -180,8 +180,12 @@ anova(model.1,model.3)
 anova(model.2,model.3)
 ```
 
+ARM combined with GRIP is still the better model even when compared to GRIP alone. the smal p value shows the possibailty of getting these results if ther was no diffrence. 
+
 ## Informally compare Model.1 with model.2
 
 ```{r}
 anova(model.1,model.2)
 ```
+
+The difference between arm and grip is -25.189. Showing that ARM is better than GRIP when comparing with anova. 
