@@ -33,7 +33,6 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ## Model 1 SIM~ARMS
 
-basicNNArms<-ggplot(data,aes(y=SIMS,x=GRIP))
 
 ### scatterplot
 
@@ -86,7 +85,6 @@ basicNN + geom_point() + geom_smooth(method=lm)
 
 ## Model 2 SIM~GRIP
 
-basicNNGrip<-ggplot(data,aes(y=SIMS,x=GRIP))
 
 ### Now add in scatterplot
 
@@ -136,8 +134,6 @@ basicNN + geom_point() + geom_smooth(method=lm)
 The scatter plot for model.2 seems to have points spread further out than the scatter plot of model.1.
 
 ## Model 3 SIM~ARM+GRIP
-
-basicNNArms+Grip<-ggplot(data,aes(y=SIMS,x=GRIP))
 
 ### Numerical results (cor)
 
